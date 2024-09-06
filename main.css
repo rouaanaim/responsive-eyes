@@ -1,0 +1,147 @@
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: changeBackground1 10s infinite alternate;
+    height: 100vh;
+}
+
+@keyframes blink {
+    0%, 95%, 100% {
+        height: 120px;
+    }
+    97%{
+        height: 0px;
+    }
+    96%, 98% {
+        height: 10px; 
+    }
+}
+
+@keyframes changeBackground1 {
+    0% {
+        background-color: #fdffb6; 
+    }
+    25% {
+        background-color: #caffbf; 
+    }
+    50% {
+        background-color: #9bf6ff; 
+    }
+    75% {
+        background-color: #a0c4ff; 
+    }
+    100% {
+        background-color: #ffc6ff; 
+    }
+}
+
+@keyframes changeBackground2 {
+    0% {
+        background-color: #d4afb9 ; 
+    }
+    25% {
+        background-color: #d1cfe2 ; 
+    }
+    50% {
+        background-color: #9cadce ; 
+    }
+    75% {
+        background-color: #7ec4cf ; 
+    }
+    100% {
+        background-color: #52b2cf; 
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0); 
+    }
+    100% {
+        transform: translateY(-30px);
+    }
+}
+
+h1 {
+    font-size: 4rem;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    margin: 0;
+    animation: float 4s ease-in-out infinite alternate;
+    /* opacity: 0; */
+}
+
+.button{
+    align-items: center;
+  appearance: none;
+  background-color: #FCFCFD;
+  border-radius: 4px;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #36395A;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+}
+
+.button:focus {
+  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+.button:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button:active {
+  box-shadow: #D6D6E7 0 3px 7px inset;
+  transform: translateY(2px);
+}
+.eyes{
+    display: flex;
+    justify-content: space-around;
+    width: 400px;
+    margin: 100px;
+}
+
+.eye{
+    width: 150px;
+    height: 120px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    overflow: hidden; /* hide the pupil when the eye blinks */
+    animation: blink 6s infinite ease-in-out; 
+}
+
+.pupil{
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    border-radius: 50%;
+    transition: transform 0.1s ease-out;
+}
